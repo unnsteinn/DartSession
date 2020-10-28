@@ -18,6 +18,20 @@
 
 void main(){
 
-  List<List<int>> myList = [[2, 4, 6, 8, 10], [3, 6, 9, 12, 15], [4, 8, 12, 16, 20]];
+  List<int> secondList = [
+    1,
+    2,
+    3
+  ];
+
+  print(secondList[1]);
+
+  List<List<int>> myList = [
+    [2, 4, 6, 8, 10],
+    [3, 6, 9, 12, 15],
+    [4, 8, 12, 16, 20]
+  ];
+
+  print(myList[1]);
 
 }

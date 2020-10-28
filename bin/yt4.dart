@@ -27,4 +27,11 @@ void main(){
 
   List<int> myList = [15, 20, 25, 30, 35];
 
+  for(int idx=0; idx < myList.length; idx++){
+    print(myList[idx]);
+  }
+  for(int number in myList){
+    print(number);
+  }
+
 }

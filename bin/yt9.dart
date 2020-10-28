@@ -13,3 +13,30 @@
   return us the list from 2.
 
  */
+
+List<int> GetNumbersBiggerThan(List<List<int>> uberList, int checkCondition){
+  List<int> greaterThan = [];
+
+  for(List<int> innerList in uberList){
+    for(int number in innerList){
+      if(number > checkCondition){
+        print('Number is larger than $checkCondition: $number');
+        greaterThan.add(number);
+      }
+    }
+  }
+  return greaterThan;
+}
+
+void main(){
+  List<List<int>> myList = [
+    [ 2, 4, 6, 8 ],
+    [ 1, 3, 5, 7 ],
+    [ 8, 6, 4, 2 ],
+    [ 7, 5, 3, 1 ]
+  ];
+
+  List<int> greaterThan = GetNumbersBiggerThan(myList, 0);
+  print('The numbers are $greaterThan');
+
+}

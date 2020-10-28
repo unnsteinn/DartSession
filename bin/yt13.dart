@@ -22,19 +22,32 @@
 
  */
 
-
-void main(){
-
-  print(is_valid_matrix([[1,2,3],[4,5,6],[7,8,9]]));
+void main() {
+  print(is_valid_matrix([
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [7, 8, 9],
+    [7, 8, 9],
+  ]));
   // Should output True
 
-  print(is_valid_matrix([[1,2,3],[4,5],[7,8,9]]));
+  print(is_valid_matrix([
+    [1, 2, 3],
+    [4, 5],
+    [7, 8, 9]
+  ]));
   // Should output False
   // because the second row only has two values, while the other ones
-
 }
 
-bool is_valid_matrix(List<List<int>>matrix){
+bool is_valid_matrix(List<List<int>> matrix) {
   // your code here
-  return null;
+  int rowLength = matrix[0].length;
+  for(List<int> row in matrix){
+    if(row.length != rowLength){
+      return false;
+    }
+  }
+  return true;
 }

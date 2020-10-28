@@ -37,14 +37,19 @@
 
 void main(){
   List<List<int>> myList = [
-    [2, 4, 6, 8 ],
+    [ 2, 4, 6, 8 ],
     [ 1, 3, 5, 7 ],
     [ 8, 6, 4, 2 ],
     [ 7, 5, 3, 1 ]
   ];
 
   for(int idx=0; idx<myList.length; idx++){
-    print(myList[idx]);
+    for(int kdx=0; kdx < myList[idx].length; kdx++){
+      print(myList[idx][kdx]);
+    }
   }
+
+
+
 
 }

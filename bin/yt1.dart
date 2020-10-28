@@ -9,6 +9,7 @@
 void main(){
 
   List<int> myList = [15, 20, 25, 30, 35];
+  print(myList[2]);
 
 }
 

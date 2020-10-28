@@ -40,10 +40,74 @@ void main(){
   // Should return null
 }
 
+List<int> GetColumn(List<List<int>> matrix, int colNumber){
+  List<int> column = [];
+  for(List<int> row in matrix){
+    column.add(row[colNumber]);
+  }
+  return column;
+}
+
+int DotProduct(List<int> row, List<int> col){
+  int sum = 0;
+  for(int idx = 0; idx < row.length; idx++){
+      sum = sum + row[idx] * col[idx];
+  }
+  return sum;
+}
+
+bool is_valid_matrix(List<List<int>> matrix) {
+  // Special case
+  if(matrix.length == 0){
+    return false;
+  }
+
+  print('FUCK ${matrix.length}');
+  int rowLength = matrix[0].length;
+  for(List<int> row in matrix){
+    if(row.length != rowLength){
+      return false;
+    }
+  }
+  return true;
+}
+
+List<List<int>> MatrixInitialize(int row, int col){
+  List<int> emptyRow = [];
+  for(int idx=0; idx < col; idx++){
+    emptyRow.add(0);
+  }
+  List<List<int>> matrix = [];
+  for(int idx=0; idx < row; idx++){
+    matrix.add([...emptyRow]);
+  }
+
+  return matrix;
+}
+
 // m is the first matrix and n is the second
 List<List<int>> matrix_multiply(List<List<int>> m, List<List<int>> n){
 
-  // ********** your code here ***************
+  // Check validity
+  int mCols = m[0].length;
+  int mRows = m.length;
+  int nCols = n[0].length;
+  int nRows = n.length;
+
+  if( (mRows != nCols) || (nRows != mCols)  || mCols == 0 || nCols == 0){
+    return null;
+  }
+
+  // Loop through each column in n and each row in m
+  List<List<int>> answer = MatrixInitialize(mRows, nCols);
+
+  for(int col=0; col < nCols; col++){
+    for(int row=0; row < mRows; row++){
+      answer[row][col] = DotProduct(m[row], GetColumn(n, col));
+    }
+  }
+
+  return answer;
 
 }
 

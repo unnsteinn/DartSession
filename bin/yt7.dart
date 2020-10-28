@@ -43,8 +43,11 @@ void main(){
     [ 7, 5, 3, 1 ]
   ];
 
-  for(List<int> innerList in myList){
-    print(innerList);
-  }
+   for(List<int> innerList in myList){
+     print('Outer for loop: $innerList');
+     for(int number in innerList){
+       print('\tInner for loop: $number');
+     }
+   }
 
 }
