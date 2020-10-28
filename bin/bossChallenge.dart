@@ -56,21 +56,6 @@ int DotProduct(List<int> row, List<int> col){
   return sum;
 }
 
-bool is_valid_matrix(List<List<int>> matrix) {
-  // Special case
-  if(matrix.length == 0){
-    return false;
-  }
-
-  print('FUCK ${matrix.length}');
-  int rowLength = matrix[0].length;
-  for(List<int> row in matrix){
-    if(row.length != rowLength){
-      return false;
-    }
-  }
-  return true;
-}
 
 List<List<int>> MatrixInitialize(int row, int col){
   List<int> emptyRow = [];
