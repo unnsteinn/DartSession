@@ -23,11 +23,5 @@ void main(){
     [4, 8, 12, 16, 20]
   ];
 
-  for(int idx=0; idx < myList.length; idx++){
-    print(myList[idx][2]);
-  }
-  for(List<int> innerList in myList){
-    print(innerList[2]);
-  }
 
 }

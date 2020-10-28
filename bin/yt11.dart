@@ -41,14 +41,4 @@ String fmt(int number){
 }
 
 void main(){
-  // Just remove this code when you are ready, I'll leave it here
-  // so you can try it out.
-
-  for(int hour=23; hour <= 23; hour--){
-    for(int minute=0; minute<=59; minute++){
-      for(int second=0; second<=59; second++){
-        print('${fmt(hour)}:${fmt(minute)}:${fmt(second)}');
-      }
-    }
-  }
 }

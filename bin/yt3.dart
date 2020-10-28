@@ -28,14 +28,5 @@ void main(){
     [4, 8, 12, 16, 20]
   ];
 
-  List<int> middleList = myList[1];
-  print(middleList);
-  int middleNumber = middleList[2];
-  print(middleNumber);
-
-  print('\nBonusChallenge');
-  int bonusChallenge = myList[2][3];
-  print(bonusChallenge);
-
 
 }

@@ -31,19 +31,9 @@ import 'dart:io';
 
 void main() {
 
-  // for(int idx=1; idx<=5; idx++){
-  //   for(int kdx=1; kdx<=idx; kdx++){
-  //     stdout.write('$kdx');
-  //   }
-  //   print('');
-  // }
 
   for(int outer=1; outer <= 5; outer++){
-    // int myNumber = outer;
-    for(int inner=1; inner<=outer; inner++){
-      stdout.write(outer);
-    }
-    print('');
+    print(outer);
   }
 
 
