@@ -24,4 +24,6 @@ void main(){
     [4, 8, 12, 16, 20]
   ];
 
+  print(myList[1]);
+
 }

@@ -43,5 +43,10 @@ void main(){
     [ 7, 5, 3, 1 ]
   ];
 
+  for(List Lists in myList){
+    for(int numbers in Lists){
+      print(numbers);
+    }
+  }
 
 }

@@ -30,11 +30,12 @@
 import 'dart:io';
 
 void main() {
-
-
-  for(int outer=1; outer <= 5; outer++){
-    print(outer);
+  for (int outer = 1; outer <= 5; outer++) {
+    for (int inner = 1; inner <= outer; inner++) {
+      stdout.write(outer);
+    }
+    print('');
   }
-
-
 }
+
+

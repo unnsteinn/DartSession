@@ -14,13 +14,23 @@
 
  */
 
-
-void main(){
+void main() {
   List<List<int>> myList = [
-    [ 2, 4, 6, 8 ],
-    [ 1, 3, 5, 7 ],
-    [ 8, 6, 4, 2 ],
-    [ 7, 5, 3, 1 ]
+    [2, 4, 6, 8],
+    [1, 3, 5, 7],
+    [8, 6, 4, 2],
+    [7, 5, 3, 1]
   ];
 
+  List <int> bigNumbers = [];
+
+  for (List Lists in myList) {
+    for (int numbers in Lists) {
+      if(numbers > 5){
+        print(numbers);
+        bigNumbers.add(numbers);
+      }
+    }
+  }
+  print(bigNumbers);
 }

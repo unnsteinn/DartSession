@@ -42,5 +42,12 @@ void main() {
 }
 
 bool is_valid_matrix(List<List<int>> matrix) {
-
+  int numColumns = matrix[0].length;
+  for (int i = 1; i < matrix.length; i++) {
+    if (matrix[i].length != numColumns) {
+      return false;
+    }
+  }
+  return true;
 }
+

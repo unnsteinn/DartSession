@@ -34,8 +34,7 @@
  */
 
 
-
-void main(){
+void main() {
   List<List<int>> myList = [
     [ 2, 4, 6, 8 ],
     [ 1, 3, 5, 7 ],
@@ -43,8 +42,11 @@ void main(){
     [ 7, 5, 3, 1 ]
   ];
 
-
-
-
-
+  for(int i = 0; i < myList.length; i++) {
+    List lists = myList[i];
+    for(int j = 0; j < lists.length; j++) {
+      int numbers = lists[j];
+      print(numbers);
+    }
+  }
 }

@@ -28,5 +28,12 @@ void main(){
     [4, 8, 12, 16, 20]
   ];
 
+  List middleList = myList[1];
+  print(middleList);
+
+  print(middleList[2]);
+
+  int bonusChallange = myList[1][2];
+  print(bonusChallange);
 
 }
